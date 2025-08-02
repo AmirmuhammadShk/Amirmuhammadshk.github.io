@@ -1,54 +1,62 @@
-// Handling the Tab switching
+// === Tab switching ===
 document.querySelectorAll('.tab').forEach(tab => {
-    tab.addEventListener('click', function () {
-        // Remove active class from all tabs
-        document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-        // Add active class to the clicked tab
-        this.classList.add('active');
-        
-        // Hide all content sections
-        document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
+  tab.addEventListener('click', function () {
+    // Activate clicked tab
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
 
-        // Show the corresponding content section
-        const contentId = this.getAttribute('href').substring(1);
-        document.getElementById(contentId).classList.add('active');
-    });
+    // Show corresponding section
+    document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
+    const targetId = this.getAttribute('href').substring(1);
+    document.getElementById(targetId).classList.add('active');
+
+    // Load dynamic content for specific tabs
+    if (targetId === 'home') {
+      loadHomeMarkdown();
+      resetTypewriter();
+    }
+
+    // Close nav drawer (mobile)
+    document.getElementById('nav-drawer').classList.remove('open');
+  });
 });
 
-// Toggle NavDrawer visibility
+// === NavDrawer toggle ===
 function toggleNavDrawer() {
-    const drawer = document.getElementById('nav-drawer');
-    drawer.classList.toggle('open');
+  document.getElementById('nav-drawer').classList.toggle('open');
 }
 
-// Close the drawer if clicked outside
-window.addEventListener('click', function(event) {
-    const drawer = document.getElementById('nav-drawer');
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    if (!drawer.contains(event.target) && !hamburgerMenu.contains(event.target)) {
-        drawer.classList.remove('open');
-    }
+// === Close nav drawer when clicking outside ===
+window.addEventListener('click', function (event) {
+  const drawer = document.getElementById('nav-drawer');
+  const hamburger = document.querySelector('.hamburger-menu');
+  if (!drawer.contains(event.target) && !hamburger.contains(event.target)) {
+    drawer.classList.remove('open');
+  }
 });
 
+// === Typewriter effect ===
 const typeTarget = document.getElementById('typewriter');
 const typeText = 'Amirmohammad Shakeri';
 let typeIndex = 0;
+let typeTimer;
 
 function typeWriter() {
   if (typeIndex < typeText.length) {
     typeTarget.textContent += typeText.charAt(typeIndex);
     typeIndex++;
-    setTimeout(typeWriter, 100);
+    typeTimer = setTimeout(typeWriter, 100);
   }
 }
 
-// Only run when home tab is active
-window.addEventListener('DOMContentLoaded', () => {
+function resetTypewriter() {
+  clearTimeout(typeTimer);
+  typeTarget.textContent = '';
+  typeIndex = 0;
   typeWriter();
-});
+}
 
-
-
+// === Markdown Loader for Home ===
 function loadHomeMarkdown() {
   fetch('home.md')
     .then(res => res.text())
@@ -58,15 +66,8 @@ function loadHomeMarkdown() {
     });
 }
 
-// Initial load for Home
+// === Initial Page Load ===
 window.addEventListener('DOMContentLoaded', () => {
   loadHomeMarkdown();
-});
-
-// Re-load if Home tab clicked again (optional)
-document.querySelectorAll('.tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    const id = tab.getAttribute('href').substring(1);
-    if (id === 'home') loadHomeMarkdown();
-  });
+  typeWriter();
 });
