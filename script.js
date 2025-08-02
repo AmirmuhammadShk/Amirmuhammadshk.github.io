@@ -168,34 +168,11 @@ async function loadCVMarkdown() {
   }
 
   const files = [
-    "contact.md",
     "summary.md",
+    "experience.md",
     "skills.md",
     "certificates.md",
     "education.md"
   ];
 
-  // Load main sections
-  for (const file of files) {
-    const html = await fetchMarkdown(`${basePath}/${file}`);
-    container.innerHTML += html;
-  }
-
-  // Load and sort experience files dynamically
-  const experiencePath = `${basePath}/`;
-  const experienceList = [
-    // ✳️ Replace with actual experience filenames or list them dynamically if pre-known
-    "experience.md",
-  ];
-
-
-
-  if (experienceList.length) {
-    container.innerHTML += `<h2>Experience</h2>`;
-  }
-
-  for (const file of experienceList) {
-    const html = await fetchMarkdown(`${experiencePath}${file}`);
-    container.innerHTML += html;
-  }
 }
