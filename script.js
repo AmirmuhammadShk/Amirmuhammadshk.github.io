@@ -186,3 +186,24 @@ async function loadCVMarkdown() {
     }
   }
 }
+function setTheme(themeName) {
+  document.body.className = themeName;
+  localStorage.setItem("selectedTheme", themeName);
+
+  const topSelect = document.getElementById("theme-selector");
+  const drawerSelect = document.getElementById("drawer-theme-selector");
+
+  if (topSelect && topSelect.value !== themeName) topSelect.value = themeName;
+  if (drawerSelect && drawerSelect.value !== themeName) drawerSelect.value = themeName;
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const saved = localStorage.getItem("selectedTheme") || "theme-green-matrix";
+  document.body.className = saved;
+
+  const topSelect = document.getElementById("theme-selector");
+  const drawerSelect = document.getElementById("drawer-theme-selector");
+
+  if (topSelect) topSelect.value = saved;
+  if (drawerSelect) drawerSelect.value = saved;
+});

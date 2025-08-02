@@ -1,15 +1,15 @@
-/* ==== BASE === */
 body {
-  font-family: 'Press Start 2P', monospace;
   margin: 0;
   padding: 0;
-  background-color: #000;
-  color: #4CAF50;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   overflow-x: hidden;
+  font-family: var(--font-family);
 }
 
+
 a {
-  color: #4CAF50;
+  color: var(--accent-color, #4CAF50);
   text-decoration: none;
   transition: 0.3s;
 }
@@ -34,13 +34,33 @@ a:hover {
 .brand-name {
   font-size: 18px;
   font-weight: bold;
-  color: #4CAF50;
+  color: var(--accent-color, #4CAF50);
 }
 .brand-icon {
   font-size: 32px !important;
   font-weight: bold;
-  color: #4CAF50;
+  color: var(--accent-color, #4CAF50);
 }
+
+/* ==== THEME TOGGLE ==== */
+.theme-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: var(--accent-color);
+  padding: 0 1rem;
+}
+.drawer-theme-toggle {
+  padding: 16px;
+  font-size: 12px;
+  border-top: 1px solid #333;
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 /* ==== TABS (Desktop) ==== */
 .navbar .tabs {
   display: flex;
@@ -49,7 +69,7 @@ a:hover {
 
 .tab {
   padding: 10px 15px;
-  color: #4CAF50;
+  color: var(--accent-color);
   font-size: 12px;
   font-weight: 500;
   border-radius: 4px;
@@ -57,7 +77,7 @@ a:hover {
 }
 
 .tab.active {
-  background-color: #4CAF50;
+  background-color: var(--accent-color);
   color: #000;
 }
 
@@ -69,7 +89,7 @@ a:hover {
 
 .hamburger-menu span {
   font-size: 28px;
-  color: #4CAF50;
+  color: var(--accent-color);
 }
 
 /* ==== NAVDRAWER (Mobile) ==== */
@@ -102,7 +122,7 @@ a:hover {
 }
 
 .nav-drawer .tab:hover {
-  background-color: #4CAF50;
+  background-color: var(--accent-color);
   color: #000;
 }
 
@@ -116,9 +136,8 @@ a:hover {
   display: block !important;
 }
 
-
 h1, h2 {
-  color: #4CAF50;
+  color: var(--accent-color);
   font-size: 18px;
   margin-bottom: 20px;
 }
@@ -129,7 +148,7 @@ h1, h2 {
   max-width: 400px;
   border-radius: 10px;
   margin: 20px 0;
-  box-shadow: 0 0 15px #4CAF50;
+  box-shadow: 0 0 15px var(--accent-color);
 }
 
 /* ==== CONTACT HERO SECTION ==== */
@@ -140,8 +159,8 @@ h1, h2 {
   gap: 40px;
   flex-wrap: wrap;
   padding: 60px 20px;
-  background-color: #000;
-  border-top: 2px solid #4CAF50;
+  background-color: var(--bg-color);
+  border-top: 2px solid var(--accent-color);
 }
 
 .contact-left {
@@ -152,14 +171,13 @@ h1, h2 {
 .contact-image {
   max-width: 250px;
   height: auto;
-  filter: brightness(1.1) drop-shadow(0 0 5px #4CAF50);
+  filter: brightness(1.1) drop-shadow(0 0 5px var(--accent-color));
 }
 
 .contact-right {
   flex: 1;
-  color: #4CAF50;
+  color: var(--accent-color);
   text-align: center;
-  /* max-width: 400px; */
 }
 
 .contact-right h2 {
@@ -183,13 +201,12 @@ h1, h2 {
   gap: 15px;
   align-items: center;
   justify-content: center;
-
 }
 
 .contact-btn {
   padding: 10px 20px;
-  border: 2px solid #4CAF50;
-  color: #4CAF50;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
   text-decoration: none;
   font-size: 10px;
   border-radius: 8px;
@@ -197,7 +214,7 @@ h1, h2 {
 }
 
 .contact-btn:hover {
-  background-color: #4CAF50;
+  background-color: var(--accent-color);
   color: #000;
 }
 
@@ -207,15 +224,15 @@ h1, h2 {
   align-items: center;
   width: 42px;
   height: 42px;
-  border: 2px solid #4CAF50;
+  border: 2px solid var(--accent-color);
   border-radius: 50%;
-  color: #4CAF50;
+  color: var(--accent-color);
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .contact-icon:hover {
-  background-color: #4CAF50;
+  background-color: var(--accent-color);
   color: #000;
 }
 
@@ -232,7 +249,7 @@ h1, h2 {
 
 .category h2 {
   font-size: 14px;
-  color: #4CAF50;
+  color: var(--accent-color);
 }
 
 .blog-post h3 {
@@ -244,9 +261,10 @@ h1, h2 {
   font-size: 11px;
   color: #cfcfcf;
 }
-.brand{
-    width: 100%;
+.brand {
+  width: 100%;
 }
+
 /* ==== MEDIA QUERIES ==== */
 @media (max-width: 768px) {
   .navbar .tabs {
@@ -266,30 +284,31 @@ h1, h2 {
     justify-content: center;
   }
 
-.brand-name {
-  font-size: 8px;
-  font-weight: bold;
-  color: #4CAF50;
-}
-.brand{
+  .brand-name {
+    font-size: 8px;
+    font-weight: bold;
+    color: var(--accent-color);
+  }
+
+  .brand {
     display: flex;
-}
-.brand-icon {
+  }
+
+  .brand-icon {
     display: none;
-}
-.brand-icon-drawer{
-  color: #4CAF50;
-  width: 60px;
-  height: 60px;
+  }
 
-
+  .brand-icon-drawer {
+    color: var(--accent-color);
+    width: 60px;
+    height: 60px;
+  }
 }
 
-}
 #typewriter::after {
   content: '_';
   animation: blink 1s step-start infinite;
-  color: #4CAF50;
+  color: var(--accent-color);
 }
 
 @keyframes blink {
@@ -297,27 +316,31 @@ h1, h2 {
     opacity: 0;
   }
 }
+
+/* ==== MARKDOWN ==== */
 .markdown-body {
   font-size: 13px;
   line-height: 1.6;
-  color: #4CAF50;
-  background-color: #000;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   padding: 20px;
   word-break: break-word;
   overflow-wrap: break-word;
   animation: fadeIn 0.4s ease-in;
 }
+
 .markdown-body pre,
 .markdown-body code {
   white-space: pre-wrap;
   word-break: break-word;
 }
+
 .markdown-body h1,
 .markdown-body h2,
 .markdown-body h3 {
   margin-top: 24px;
   margin-bottom: 12px;
-  color: #4CAF50;
+  color: var(--accent-color);
   font-size: 16px;
 }
 
@@ -336,7 +359,7 @@ h1, h2 {
 
 .markdown-body th,
 .markdown-body td {
-  border: 1px solid #4CAF50;
+  border: 1px solid var(--accent-color);
   padding: 8px;
   font-size: 12px;
   text-align: left;
@@ -346,7 +369,7 @@ h1, h2 {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-/* Mobile-friendly markdown */
+
 @media (max-width: 768px) {
   .markdown-body {
     font-size: 12px;
@@ -378,16 +401,16 @@ h1, h2 {
   }
 }
 
-
+/* ==== BLOG === */
 #blog-categories h2 {
-  color: #4CAF50;
+  color: var(--accent-color);
   margin-top: 30px;
   font-size: 16px;
 }
 
 .blog-post {
   padding: 10px 0;
-  border-bottom: 1px dashed #4CAF50;
+  border-bottom: 1px dashed var(--accent-color);
 }
 
 .blog-post h1, .blog-post h2 {
@@ -395,6 +418,7 @@ h1, h2 {
   font-size: 14px;
   color: #ffffff;
 }
+
 .blog-tab-bar {
   display: flex;
   flex-wrap: wrap;
@@ -405,8 +429,8 @@ h1, h2 {
 .blog-tab {
   padding: 8px 12px;
   background-color: transparent;
-  border: 1px solid #4CAF50;
-  color: #4CAF50;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
   cursor: pointer;
   font-size: 12px;
   border-radius: 6px;
@@ -415,7 +439,7 @@ h1, h2 {
 
 .blog-tab.active,
 .blog-tab:hover {
-  background-color: #4CAF50;
+  background-color: var(--accent-color);
   color: #000;
 }
 
@@ -426,20 +450,21 @@ h1, h2 {
 .blog-list-item {
   padding: 5px 0;
   cursor: pointer;
-  color: #4CAF50;
-  border-bottom: 1px dashed #4CAF50;
+  color: var(--accent-color);
+  border-bottom: 1px dashed var(--accent-color);
   font-size: 13px;
 }
 
 .blog-list-item:hover {
   color: #ffffff;
 }
+
 .download-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 8px 14px;
-  background-color: #4CAF50;
+  background-color: var(--accent-color);
   color: black;
   border-radius: 4px;
   text-decoration: none;
@@ -450,4 +475,135 @@ h1, h2 {
 
 .download-btn:hover {
   background-color: #66bb6a;
+}
+
+/* ==== THEME DEFINITIONS ==== */
+/* ==== THEME DEFINITIONS ==== */
+
+/* ✅ Green Matrix (Default) */
+body.theme-green-matrix {
+  --font-family: 'Press Start 2P', monospace;
+  --bg-color: #000;
+  --text-color: #4CAF50;
+  --accent-color: #4CAF50;
+  --link-hover: #ffffff;
+  --btn-bg: #4CAF50;
+  --btn-text: #000;
+  --table-border: #4CAF50;
+  --header-color: #4CAF50;
+}
+
+/* Pink, Teal, and Cream */
+body.theme-pink-teal-cream {
+  --font-family: 'Roboto', sans-serif;
+  --bg-color: #fffaf9;
+  --text-color: #880e4f;
+  --accent-color: #009688;
+  --link-hover: #c2185b;
+  --btn-bg: #e91e63;
+  --btn-text: #ffffff;
+  --table-border: #f8bbd0;
+  --header-color: #00695c;
+}
+
+/* Orange and Yellow */
+body.theme-orange-yellow {
+  --font-family: 'Roboto', sans-serif;
+  --bg-color: #fff8e1;
+  --text-color: #e65100;
+  --accent-color: #ffb300;
+  --link-hover: #ff6f00;
+  --btn-bg: #ff9800;
+  --btn-text: #000;
+  --table-border: #ffe0b2;
+  --header-color: #ff6f00;
+}
+
+/* Green, Red, and White */
+body.theme-green-red-white {
+  --font-family: 'Roboto', sans-serif;
+  --bg-color: #ffffff;
+  --text-color: #1b5e20;
+  --accent-color: #c62828;
+  --link-hover: #d32f2f;
+  --btn-bg: #2e7d32;
+  --btn-text: #fff;
+  --table-border: #c8e6c9;
+  --header-color: #388e3c;
+}
+
+/* Red and Black */
+body.theme-red-black {
+  --font-family: 'Roboto', sans-serif;
+  --bg-color: #000000;
+  --text-color: #f44336;
+  --accent-color: #d50000;
+  --link-hover: #ff1744;
+  --btn-bg: #f44336;
+  --btn-text: #fff;
+  --table-border: #ff8a80;
+  --header-color: #f44336;
+}
+
+/* Blue Shades and White */
+body.theme-blue-white {
+  --font-family: 'Roboto', sans-serif;
+  --bg-color: #e3f2fd;
+  --text-color: #0d47a1;
+  --accent-color: #2196f3;
+  --link-hover: #1976d2;
+  --btn-bg: #42a5f5;
+  --btn-text: #fff;
+  --table-border: #bbdefb;
+  --header-color: #1565c0;
+}
+
+/* White and Lime Green */
+body.theme-white-lime {
+  --font-family: 'Roboto', sans-serif;
+  --bg-color: #ffffff;
+  --text-color: #33691e;
+  --accent-color: #cddc39;
+  --link-hover: #827717;
+  --btn-bg: #cddc39;
+  --btn-text: #000;
+  --table-border: #f0f4c3;
+  --header-color: #689f38;
+}
+
+
+.nav-theme-selector {
+  padding: 12px 16px;
+  border-top: 1px solid var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.nav-theme-selector label {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--accent-color);
+  transition: color 0.3s;
+}
+
+#theme-selector,
+#drawer-theme-selector {
+  padding: 6px 10px;
+  font-size: 12px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#theme-selector:focus,
+#drawer-theme-selector:focus {
+  outline: 2px solid var(--accent-color);
 }
