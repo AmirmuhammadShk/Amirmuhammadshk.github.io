@@ -17,7 +17,11 @@
 
     <!-- Nav Drawer (for mobile) -->
     <div id="nav-drawer" class="nav-drawer">
+            <img src="assets/linux.svg" alt="Logo" class="brand-icon-drawer" />
+            <img src="assets/gnu.svg" alt="Logo" class="brand-icon-drawer" />
+
         <div class="nav-drawer-content">
+
             <a href="#home" class="tab">Home</a>
             <!-- <a href="#cv" class="tab">CV</a> -->
             <a href="#blog" class="tab">Blog</a>
@@ -27,9 +31,12 @@
 
     <!-- Top Bar (for desktop and mobile) -->
     <nav class="navbar">
+        <div class="hamburger-menu" onclick="toggleNavDrawer()">
+            <span class="material-icons">menu</span>
+        </div>
         <div class="brand">
             <i class="mdi mdi-linux brand-icon"></i>
-            <span class="brand-name">You can hear me from the terminal</span>
+            <span class="brand-name">Free Software, Free Society</span>
         </div>
         <div class="tabs">
             <a href="#home" class="tab active">Home</a>
@@ -38,9 +45,7 @@
             <a href="#contact" class="tab">Contact</a>
         </div>
         <!-- Hamburger Button (only shown in mobile mode) -->
-        <div class="hamburger-menu" onclick="toggleNavDrawer()">
-            <span class="material-icons">menu</span>
-        </div>
+        
     </nav>
 
     <!-- Content Section -->

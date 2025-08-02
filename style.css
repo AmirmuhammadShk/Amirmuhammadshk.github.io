@@ -36,7 +36,11 @@ a:hover {
   font-weight: bold;
   color: #4CAF50;
 }
-
+.brand-icon {
+  font-size: 32px !important;
+  font-weight: bold;
+  color: #4CAF50;
+}
 /* ==== TABS (Desktop) ==== */
 .navbar .tabs {
   display: flex;
@@ -78,7 +82,7 @@ a:hover {
   background-color: #111;
   z-index: 999;
   transition: 0.3s ease-in-out;
-  padding-top: 60px;
+  padding-top: 10px;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.8);
 }
 
@@ -240,7 +244,9 @@ h1, h2 {
   font-size: 11px;
   color: #cfcfcf;
 }
-
+.brand{
+    width: 100%;
+}
 /* ==== MEDIA QUERIES ==== */
 @media (max-width: 768px) {
   .navbar .tabs {
@@ -259,6 +265,26 @@ h1, h2 {
   .contact-buttons {
     justify-content: center;
   }
+
+.brand-name {
+  font-size: 8px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+.brand{
+    display: flex;
+}
+.brand-icon {
+    display: none;
+}
+.brand-icon-drawer{
+  color: #4CAF50;
+  width: 60px;
+  height: 60px;
+
+
+}
+
 }
 #typewriter::after {
   content: '_';
