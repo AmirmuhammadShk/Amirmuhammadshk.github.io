@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amirmohammad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+    <!-- Nav Drawer (for mobile) -->
+    <div id="nav-drawer" class="nav-drawer">
+        <div class="nav-drawer-content">
+            <a href="#home" class="tab">Home</a>
+            <a href="#cv" class="tab">CV</a>
+            <a href="#blog" class="tab">Blog</a>
+            <a href="#contact" class="tab">Contact</a>
+        </div>
+    </div>
+
+    <!-- Top Bar (for desktop and mobile) -->
+    <nav class="navbar">
+        <div class="brand">
+            <i class="mdi mdi-linux brand-icon"></i>
+            <span class="brand-name">Amirmohammad</span>
+        </div>
+        <div class="tabs">
+            <a href="#home" class="tab active">Home</a>
+            <a href="#cv" class="tab">CV</a>
+            <a href="#blog" class="tab">Blog</a>
+            <a href="#contact" class="tab">Contact</a>
+        </div>
+        <!-- Hamburger Button (only shown in mobile mode) -->
+        <div class="hamburger-menu" onclick="toggleNavDrawer()">
+            <span class="material-icons">menu</span>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <div id="home" class="content-section active">
+        <h1 id="typewriter"></h1>
+        <p>This is a brief summary about me...</p>
+    </div>
+
+    <div id="cv" class="content-section">
+        <h1>CV & Resume</h1>
+        <p>Download my <a href="CV.pdf" target="_blank">CV</a> and see my resume.</p>
+    </div>
+
+    <div id="blog" class="content-section">
+        <h1>My Blog</h1>
+        <p>Here are my blog posts...</p>
+        <div id="blog-categories"></div>
+    </div>
+
+    <div id="contact" class="content-section contact-hero">
+        <div class="contact-left">
+            <img src="Matrix.png" alt="Character illustration" class="contact-image">
+        </div>
+        <div class="contact-right">
+            <h2>I’d love to hear from <span class="highlight">you.</span></h2>
+            <p>Got a project you’d like me to work on? Or just a friendly chat?</p>
+            <div class="contact-buttons">
+                <a href="mailto:Amirmuhammadshk@gmail.com" class="contact-icon" title="Gmail" target="_blank">
+                    <i class="mdi mdi-gmail"></i>
+                </a>
+                <a href="https://linkedin.com/in/AmirmuhammadShk" class="contact-icon" title="LinkedIn" target="_blank">
+                    <i class="mdi mdi-linkedin"></i>
+                </a>
+                <a href="https://github.com/AmirmuhammadShk" class="contact-icon" title="GitHub" target="_blank">
+                    <i class="mdi mdi-github"></i>
+                </a>
+                <a href="https://twitter.com/AmirmuhammadShk" class="contact-icon" title="Twitter" target="_blank">
+                    <i class="mdi mdi-twitter"></i>
+                </a>
+                <!-- <a href="https://t.me/AmirmuhammadShk" class="contact-icon" title="Telegram" target="_blank">
+                    <i class="mdi mdi-telegram"></i>
+                </a> -->
+                </div>
+        </div>
+        </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
