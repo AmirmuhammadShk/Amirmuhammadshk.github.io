@@ -171,7 +171,7 @@ async function loadCVMarkdown() {
   const files = [
     "summary.md",
     "experience.md",  // ✅ this now exists
-    "contact.md",
+    // "contact.md",
     "skills.md",
     "certificates.md",
     "education.md"
