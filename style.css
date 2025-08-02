@@ -434,3 +434,20 @@ h1, h2 {
 .blog-list-item:hover {
   color: #ffffff;
 }
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background-color: #4CAF50;
+  color: black;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 20px;
+  transition: background 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #66bb6a;
+}

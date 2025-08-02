@@ -18,6 +18,10 @@ document.querySelectorAll('.tab').forEach(tab => {
       loadHomeMarkdown();
       resetTypewriter();
     }
+    if (targetId === 'cv') {
+        loadCVMarkdown();
+        }
+
 
     // Close nav drawer (mobile)
     document.getElementById('nav-drawer').classList.remove('open');
@@ -81,34 +85,6 @@ const blogData = {
   GenAI: ['Generative.md'],
 };
 
-// function loadBlogMarkdown() {
-//   const container = document.getElementById('blog-categories');
-//   container.innerHTML = ''; // clear previous
-
-//   for (const [category, posts] of Object.entries(blogStructure)) {
-//     const categoryDiv = document.createElement('div');
-//     const categoryHeader = document.createElement('h2');
-//     categoryHeader.textContent = `📂 ${category.toUpperCase()}`;
-//     categoryDiv.appendChild(categoryHeader);
-
-//     posts.forEach(filename => {
-//       const postDiv = document.createElement('div');
-//       const postPath = `blog/${category}/${filename}`;
-
-//       fetch(postPath)
-//         .then(res => res.text())
-//         .then(md => {
-//           const html = marked.parse(md);
-//           postDiv.innerHTML = html;
-//           postDiv.classList.add('blog-post');
-//           categoryDiv.appendChild(postDiv);
-//         });
-//     });
-
-//     container.appendChild(categoryDiv);
-//   }
-// }
-
 
 function loadBlogMarkdown() {
   const categoryTabs = document.getElementById('blog-categories-tabs');
@@ -154,4 +130,62 @@ function showPostTitles(category) {
     };
     postsList.appendChild(postItem);
   });
+}
+
+async function detectLatestCVPath() {
+  // Manually list the folders since we can't read file structure in browser
+  // Simulate this list for now — UPDATE with actual names from your server
+  const allDirs = [
+    "CV/2025-08-02-active",
+    "CV/2025-07-02",
+  ];
+
+  const activeDirs = allDirs.filter(name => name.endsWith("-active"));
+  if (!activeDirs.length) return null;
+
+  activeDirs.sort(); // Alphabetical = chronological if formatted as yyyy-mm-dd
+  return activeDirs[activeDirs.length - 1]; // Latest active
+}
+
+async function loadCVMarkdown() {
+  const container = document.getElementById("cv-content");
+  container.innerHTML = "";
+
+  const basePath = await detectLatestCVPath();
+  if (!basePath) {
+    container.innerHTML = "<p>No active CV found.</p>";
+    return;
+  }
+
+  const files = [
+    "contact.md",
+    "summary.md",
+    "skills.md",
+    "certificates.md",
+    "education.md"
+  ];
+
+  // Load main sections
+  for (const file of files) {
+    const html = await fetchMarkdown(`${basePath}/${file}`);
+    container.innerHTML += html;
+  }
+
+  // Load and sort experience files dynamically
+  const experiencePath = `${basePath}/`;
+  const experienceList = [
+    // ✳️ Replace with actual experience filenames or list them dynamically if pre-known
+    "experience.md",
+  ];
+
+
+
+  if (experienceList.length) {
+    container.innerHTML += `<h2>Experience</h2>`;
+  }
+
+  for (const file of experienceList) {
+    const html = await fetchMarkdown(`${experiencePath}${file}`);
+    container.innerHTML += html;
+  }
 }
