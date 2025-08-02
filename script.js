@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const blogStructure = {
+const blogData = {
   AI: ['Test.md'],
   GenAI: ['Generative.md'],
 };
