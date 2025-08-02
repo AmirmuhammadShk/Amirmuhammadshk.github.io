@@ -85,7 +85,17 @@ const blogData = {
   GenAI: ['Generative.md'],
 };
 
-
+async function fetchMarkdown(path) {
+  try {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error(`Failed to load ${path}`);
+    const md = await res.text();
+    return marked.parse(md);
+  } catch (err) {
+    console.warn(err.message);
+    return "";
+  }
+}
 function loadBlogMarkdown() {
   const categoryTabs = document.getElementById('blog-categories-tabs');
   const postsList = document.getElementById('blog-posts-list');
