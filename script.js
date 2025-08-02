@@ -157,6 +157,7 @@ async function detectLatestCVPath() {
   return activeDirs[activeDirs.length - 1]; // Latest active
 }
 
+
 async function loadCVMarkdown() {
   const container = document.getElementById("cv-content");
   container.innerHTML = "";
@@ -169,10 +170,19 @@ async function loadCVMarkdown() {
 
   const files = [
     "summary.md",
-    "experience.md",
+    "experience.md",  // ✅ this now exists
+    "contact.md",
     "skills.md",
     "certificates.md",
     "education.md"
   ];
 
+  for (const file of files) {
+    try {
+      const html = await fetchMarkdown(`${basePath}/${file}`);
+      container.innerHTML += `<section class="cv-section">${html}</section>`;
+    } catch (e) {
+      console.warn(`Could not load ${file}`, e);
+    }
+  }
 }
