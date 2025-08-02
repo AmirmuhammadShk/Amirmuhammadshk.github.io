@@ -11,6 +11,9 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.getElementById(targetId).classList.add('active');
 
     // Load dynamic content for specific tabs
+    if (targetId === 'blog') {
+        loadBlogMarkdown();
+        }
     if (targetId === 'home') {
       loadHomeMarkdown();
       resetTypewriter();
@@ -71,3 +74,36 @@ window.addEventListener('DOMContentLoaded', () => {
   loadHomeMarkdown();
   typeWriter();
 });
+
+
+const blogStructure = {
+  AI: ['Test.md'],
+};
+
+function loadBlogMarkdown() {
+  const container = document.getElementById('blog-categories');
+  container.innerHTML = ''; // clear previous
+
+  for (const [category, posts] of Object.entries(blogStructure)) {
+    const categoryDiv = document.createElement('div');
+    const categoryHeader = document.createElement('h2');
+    categoryHeader.textContent = `📂 ${category.toUpperCase()}`;
+    categoryDiv.appendChild(categoryHeader);
+
+    posts.forEach(filename => {
+      const postDiv = document.createElement('div');
+      const postPath = `blog/${category}/${filename}`;
+
+      fetch(postPath)
+        .then(res => res.text())
+        .then(md => {
+          const html = marked.parse(md);
+          postDiv.innerHTML = html;
+          postDiv.classList.add('blog-post');
+          categoryDiv.appendChild(postDiv);
+        });
+    });
+
+    container.appendChild(categoryDiv);
+  }
+}

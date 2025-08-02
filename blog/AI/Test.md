@@ -1,4 +1,3 @@
 # Test
-Content of the blog post goes here.
-Created At: 2025-08-02
-Creator: Your Name
+blalalal
+_Date: 2025-08-01 | Tags: AI
