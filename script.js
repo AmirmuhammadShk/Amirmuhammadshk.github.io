@@ -78,32 +78,80 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const blogStructure = {
   AI: ['Test.md'],
+  GenAI: ['Generative.md'],
 };
 
+// function loadBlogMarkdown() {
+//   const container = document.getElementById('blog-categories');
+//   container.innerHTML = ''; // clear previous
+
+//   for (const [category, posts] of Object.entries(blogStructure)) {
+//     const categoryDiv = document.createElement('div');
+//     const categoryHeader = document.createElement('h2');
+//     categoryHeader.textContent = `📂 ${category.toUpperCase()}`;
+//     categoryDiv.appendChild(categoryHeader);
+
+//     posts.forEach(filename => {
+//       const postDiv = document.createElement('div');
+//       const postPath = `blog/${category}/${filename}`;
+
+//       fetch(postPath)
+//         .then(res => res.text())
+//         .then(md => {
+//           const html = marked.parse(md);
+//           postDiv.innerHTML = html;
+//           postDiv.classList.add('blog-post');
+//           categoryDiv.appendChild(postDiv);
+//         });
+//     });
+
+//     container.appendChild(categoryDiv);
+//   }
+// }
+
+
 function loadBlogMarkdown() {
-  const container = document.getElementById('blog-categories');
-  container.innerHTML = ''; // clear previous
+  const categoryTabs = document.getElementById('blog-categories-tabs');
+  const postsList = document.getElementById('blog-posts-list');
+  const postView = document.getElementById('blog-post-view');
 
-  for (const [category, posts] of Object.entries(blogStructure)) {
-    const categoryDiv = document.createElement('div');
-    const categoryHeader = document.createElement('h2');
-    categoryHeader.textContent = `📂 ${category.toUpperCase()}`;
-    categoryDiv.appendChild(categoryHeader);
+  categoryTabs.innerHTML = '';
+  postsList.innerHTML = '';
+  postView.innerHTML = '';
 
-    posts.forEach(filename => {
-      const postDiv = document.createElement('div');
-      const postPath = `blog/${category}/${filename}`;
+  for (const category in blogData) {
+    const btn = document.createElement('button');
+    btn.textContent = category.toUpperCase();
+    btn.classList.add('blog-tab');
+    btn.onclick = () => {
+      document.querySelectorAll('.blog-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      showPostTitles(category);
+      postView.innerHTML = '';
+    };
+    categoryTabs.appendChild(btn);
+  }
+}
 
-      fetch(postPath)
+function showPostTitles(category) {
+  const postsList = document.getElementById('blog-posts-list');
+  const postView = document.getElementById('blog-post-view');
+  postsList.innerHTML = '';
+
+  blogData[category].forEach(filename => {
+    const title = filename.replace(/\.md$/, '').replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const postItem = document.createElement('div');
+    postItem.classList.add('blog-list-item');
+    postItem.textContent = `📄 ${title}`;
+    postItem.onclick = () => {
+      const path = `blog/${category}/${filename}`;
+      fetch(path)
         .then(res => res.text())
         .then(md => {
-          const html = marked.parse(md);
-          postDiv.innerHTML = html;
-          postDiv.classList.add('blog-post');
-          categoryDiv.appendChild(postDiv);
+          postView.innerHTML = marked.parse(md);
+          window.scrollTo({ top: postView.offsetTop - 60, behavior: 'smooth' });
         });
-    });
-
-    container.appendChild(categoryDiv);
-  }
+    };
+    postsList.appendChild(postItem);
+  });
 }
