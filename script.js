@@ -83,7 +83,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const blogData = {
   AI: ['Test.md'],
-  GenerativeAi: ['Introduction.md'],
+  GenerativeAI: ['Introduction.md'],
 };
 
 async function fetchMarkdown(path) {
