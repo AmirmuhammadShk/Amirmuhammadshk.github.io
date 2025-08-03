@@ -1,77 +1,43 @@
 # 🛠 Skills
-
-## 💻 Programming Languages
-- 🐍 **Python**
-- 🦀 **Rust**
-- 🐘 **PostgreSQL**
-- 🧵 **Bash**
-- 🧠 **C**
-- ☁️ **Terraform**
-
-## 🎯 Frameworks & Libraries
-- ⚡ **FastAPI**
-- 🌐 **Django**
-- ⚛️ **React.js / React**
-- 🔄 **LangChain**
-- 🧠 **Semantic Kernel**
-- 🔄 **AutoGen**
-
-## 🧠 Artificial Intelligence
-- 🧠 **Machine Learning**
-- 🧬 **Deep Learning**
-- 🧠 **Generative AI**
-- 📚 **Large Language Models (LLMs)**
-- 🧩 **Retrieval-Augmented Generation (RAG)**
-- 🧑‍🏫 **Prompt Engineering**
-- 🤖 **Artificial Intelligence (AI)**
-- 🤖 **Reinforcement Learning**
-
-## 🗃️ Databases & Caching
-- 🧱 **Vector Databases**
-- 🐘 **PostgreSQL**
-- 🧠 **Redis**
-- 🔎 **Elasticsearch**
-
-## ☁️ Cloud Platforms & Services
-- ☁️ **Google Cloud Platform (GCP)**
-- ☁️ **Microsoft Azure**
-- 🧰 **Platform as a Service (PaaS)**
-- 🛠 **Infrastructure as a Service (IaaS)**
-- 🛡 **Cloud Security**
-- 🌩 **Cloud Computing**
-- 📦 **Software as a Service (SaaS)**
-
-## 🧑‍💼 DevOps & Infrastructure
-- 🐳 **Docker**
-- 🧪 **CI/CD**
-- 📦 **Jenkins**
-- 📡 **Ansible**
-- 📈 **Zabbix**
-- 📊 **Nagios**
-- ⚙️ **Git**
-- ☸️ **Kubernetes**
-- ⚙️ **Cloud and DevOps**
-
-## 📡 Systems & Networking
-- 🐧 **Linux**
-- 🧠 **FreeBSD**
-- 🔌 **Socket Programming**
-- 🧰 **Microservices**
-- 🌐 **Networking & Monitoring**
+# 🛠 Skills Summary
 
 ---
 
-## ✅ Endorsed / Certified Skills
+## 💻 Programming Languages  
+**Python** · **Rust** · **C** · **Bash** · **PostgreSQL** · **Terraform**
 
-- 🐍 **Python OOP** — *3 endorsements*
-- 🧠 **C (Programming Language)** — *2 endorsements*
-- 🧵 **Bash** — *3 endorsements & LinkedIn Assessment Passed*
-- 🐘 **PostgreSQL** — *2 endorsements*
-- 🧠 **Redis** — *2 endorsements*
-- 🔌 **Socket Programming** — *2 endorsements*
-- 🧰 **Microservices** — *2 endorsements*
-- ⚙️ **Git** — *1 endorsement*
-- ☁️ **Azure Cloud Concepts & Security (AZ-900)** — *Completed*
-- 🧠 **Generative AI** — *6 courses completed*
-- 🔄 **Prompt Engineering** — *Certified*
+---
+
+## ⚙️ Frameworks & Libraries  
+**FastAPI** · **Django** · **React.js** · **LangChain** · **Semantic Kernel** · **AutoGen**
+
+---
+
+## 🤖 Artificial Intelligence & ML  
+**Generative AI** · **LLMs** · **Retrieval-Augmented Generation (RAG)** · **Prompt Engineering**  
+**Machine Learning** · **Deep Learning** · **Reinforcement Learning**
+
+---
+
+## 🗃️ Databases & Caching  
+**PostgreSQL** · **Redis** · **Vector Databases** · **Elasticsearch**
+
+---
+
+## ☁️ Cloud Platforms  
+**Google Cloud Platform (GCP)** · **Microsoft Azure**  
+**PaaS** · **IaaS** · **SaaS** · **Cloud Security** · **Cloud Architecture**
+
+---
+
+## 🔧 DevOps & Infrastructure  
+**Docker** · **Kubernetes** · **CI/CD Pipelines** · **Terraform**  
+**Ansible** · **Jenkins** · **Git** · **Infrastructure as Code (IaC)**  
+**Monitoring:** **Zabbix**, **Nagios**
+
+---
+
+## 🖧 Systems & Networking  
+**Linux** · **FreeBSD** · **Socket Programming** · **Microservices Architecture**  
+**Network Protocols** · **System Monitoring & Automation**
 
