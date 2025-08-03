@@ -1,3 +1,4 @@
+const DEFAULT_THEME = "theme-green-on-dark-matrix";
 // === Tab switching ===
 document.querySelectorAll('.tab').forEach(tab => {
   tab.addEventListener('click', function () {
@@ -187,23 +188,33 @@ async function loadCVMarkdown() {
   }
 }
 function setTheme(themeName) {
+  // Apply to body
   document.body.className = themeName;
   localStorage.setItem("selectedTheme", themeName);
-
+  console.log(themeName);
+  // Sync dropdowns
   const topSelect = document.getElementById("theme-selector");
   const drawerSelect = document.getElementById("drawer-theme-selector");
-
+  console.log(topSelect.value);
+  console.log(drawerSelect.value);
   if (topSelect && topSelect.value !== themeName) topSelect.value = themeName;
   if (drawerSelect && drawerSelect.value !== themeName) drawerSelect.value = themeName;
+
+  // Update themed assets
+  const linuxIcon = document.getElementById("linux-icon");
+  const gnuIcon = document.getElementById("gnu-icon");
+  const matrixImage = document.getElementById("matrix-image");
+
+  const isGreenTheme = themeName.includes("green");
+
+  if (linuxIcon) linuxIcon.src = isGreenTheme ? "assets/linux_green.svg" : "assets/linux_blue.svg";
+  if (gnuIcon) gnuIcon.src = isGreenTheme ? "assets/gnu_green.svg" : "assets/gnu_blue.svg";
+  if (matrixImage) matrixImage.src = isGreenTheme ? "assets/matrix_green.png" : "assets/matrix_blue.png";
 }
 
+// Apply on page load
 window.addEventListener("DOMContentLoaded", () => {
-  const saved = localStorage.getItem("selectedTheme") || "theme-green-matrix";
-  document.body.className = saved;
-
-  const topSelect = document.getElementById("theme-selector");
-  const drawerSelect = document.getElementById("drawer-theme-selector");
-
-  if (topSelect) topSelect.value = saved;
-  if (drawerSelect) drawerSelect.value = saved;
+  console.log( localStorage.getItem("selectedTheme"));
+  const savedTheme = localStorage.getItem("selectedTheme") || DEFAULT_THEME;
+  setTheme(savedTheme);
 });

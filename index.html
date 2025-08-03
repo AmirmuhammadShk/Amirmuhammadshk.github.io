@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="icon" type="image/svg+xml" href="assets/linux.svg">
     <meta charset="UTF-8">
@@ -13,13 +14,13 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
-<body>
+
+<body class="theme-green-on-dark-matrix">
 
     <!-- Nav Drawer (for mobile) -->
     <div id="nav-drawer" class="nav-drawer">
-            <img src="assets/linux.svg" alt="Logo" class="brand-icon-drawer" />
-            <img src="assets/gnu.svg" alt="Logo" class="brand-icon-drawer" />
-
+        <img id="linux-icon" src="assets/linux.svg" alt="Logo" class="brand-icon-drawer" />
+        <img id="gnu-icon" src="assets/gnu.svg" alt="Logo" class="brand-icon-drawer" />
         <div class="nav-drawer-content">
 
             <a href="#home" class="tab">Home</a>
@@ -27,17 +28,16 @@
             <a href="#blog" class="tab">Blog</a>
             <a href="#contact" class="tab">Contact</a>
             <div class="nav-theme-selector">
-  <label for="drawer-theme-selector">Theme:</label>
-  <select id="drawer-theme-selector" onchange="setTheme(this.value)">
-    <option value="theme-green-matrix"> Neo Terminal</option>
-    <option value="theme-pink-teal-cream">Playful Breeze</option>
-    <option value="theme-orange-yellow">Solar Bloom</option>
-    <option value="theme-green-red-white">Verdant Pulse</option>
-    <option value="theme-red-black">Crimson Night</option>
-    <option value="theme-blue-white">Ocean Whisper</option>
-    <option value="theme-white-lime">Spring Circuit</option>
-  </select>
-</div>
+                <select id="theme-selector" onchange="setTheme(this.value)">
+                    <option value="theme-green-on-dark-matrix" >Dark Green Terminal</option>
+                    <option value="theme-green-on-light-matrix">Light Green Terminal</option>
+                    <option value="theme-blue-on-dark-matrix">Dark Blue Terminal</option>
+                    <option value="theme-blue-on-light-matrix">Light Blue Terminal</option>
+                    <option value="theme-green-material-matrix ">Material Green</option>
+                    <option value="theme-blue-material-matrix">Material Blue</option>
+                </select>
+            </div>
+
 
         </div>
     </div>
@@ -47,37 +47,37 @@
         <div class="hamburger-menu" onclick="toggleNavDrawer()">
             <span class="material-icons">menu</span>
         </div>
+
         <div class="brand">
             <i class="mdi mdi-linux brand-icon"></i>
             <span class="brand-name">Free Software, Free Society</span>
         </div>
+
         <div class="tabs">
             <a href="#home" class="tab active">Home</a>
             <a href="#cv" class="tab">CV</a>
             <a href="#blog" class="tab">Blog</a>
             <a href="#contact" class="tab">Contact</a>
-            <select id="theme-selector" onchange="setTheme(this.value)">
-  <option value="theme-green-matrix">Neo Terminal</option>
-    <option value="theme-pink-teal-cream">Playful Breeze</option>
-    <option value="theme-orange-yellow">Solar Bloom</option>
-    <option value="theme-green-red-white">Verdant Pulse</option>
-    <option value="theme-red-black">Crimson Night</option>
-    <option value="theme-blue-white">Ocean Whisper</option>
-    <option value="theme-white-lime">Spring Circuit</option>
-    </select>
 
-
+            <div class="theme-select-wrapper">
+                <select id="drawer-theme-selector" onchange="setTheme(this.value)">
+                    <option value="theme-green-on-dark-matrix" >Dark Green Terminal</option>
+                    <option value="theme-green-on-light-matrix">Light Green Terminal</option>
+                    <option value="theme-blue-on-dark-matrix">Dark Blue Terminal</option>
+                    <option value="theme-blue-on-light-matrix">Light Blue Terminal</option>
+                    <option value="theme-green-material-matrix ">Material Green</option>
+                    <option value="theme-blue-material-matrix">Material Blue</option>
+                </select>
+            </div>
         </div>
-        <!-- Hamburger Button (only shown in mobile mode) -->
-        
     </nav>
 
     <!-- Content Section -->
-     <div id="home" class="content-section active">
+    <div id="home" class="content-section active">
         <h1 id="typewriter"></h1>
         <div id="home-md" class="markdown-body"></div>
     </div>
-    
+
 
     <div id="cv" class="content-section">
         <h1><i class="material-icons">description</i> CV & Resume</h1>
@@ -86,22 +86,22 @@
         </a>
 
         <div id="cv-content" class="markdown-body"></div>
-        </div>
+    </div>
 
 
     <div id="blog" class="content-section">
         <!-- <h1><i class="material-icons">article</i> Blog</h1> -->
-        
+
         <div id="blog-categories-tabs" class="blog-tab-bar"></div>
         <div id="blog-posts-list" class="blog-list"></div>
         <div id="blog-post-view" class="markdown-body"></div>
-        </div>
+    </div>
 
 
 
     <div id="contact" class="content-section contact-hero">
         <div class="contact-left">
-            <img src="assets/matrix.png" alt="Character illustration" class="contact-image">
+            <img id="matrix-image" src="assets/matrix.png" alt="Character illustration" class="contact-image" />
         </div>
         <div class="contact-right">
             <h2>I’d love to hear from <span class="highlight">you.</span></h2>
@@ -122,11 +122,12 @@
                 <!-- <a href="https://t.me/AmirmuhammadShk" class="contact-icon" title="Telegram" target="_blank">
                     <i class="mdi mdi-telegram"></i>
                 </a> -->
-                </div>
+            </div>
         </div>
-        </div>
+    </div>
 
 
     <script src="script.js"></script>
 </body>
+
 </html>
