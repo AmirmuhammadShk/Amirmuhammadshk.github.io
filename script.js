@@ -173,7 +173,7 @@ async function loadCVMarkdown() {
     "summary.md",
     "experience.md",  // ✅ this now exists
     // "contact.md",
-    "skills.md",
+    // "skills.md",
     "certificates.md",
     "education.md"
   ];
