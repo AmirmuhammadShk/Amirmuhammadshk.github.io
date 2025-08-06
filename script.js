@@ -191,12 +191,9 @@ function setTheme(themeName) {
   // Apply to body
   document.body.className = themeName;
   localStorage.setItem("selectedTheme", themeName);
-  console.log(themeName);
   // Sync dropdowns
   const topSelect = document.getElementById("theme-selector");
   const drawerSelect = document.getElementById("drawer-theme-selector");
-  console.log(topSelect.value);
-  console.log(drawerSelect.value);
   if (topSelect && topSelect.value !== themeName) topSelect.value = themeName;
   if (drawerSelect && drawerSelect.value !== themeName) drawerSelect.value = themeName;
 
@@ -214,7 +211,6 @@ function setTheme(themeName) {
 
 // Apply on page load
 window.addEventListener("DOMContentLoaded", () => {
-  console.log( localStorage.getItem("selectedTheme"));
   const savedTheme = localStorage.getItem("selectedTheme") || DEFAULT_THEME;
   setTheme(savedTheme);
 });
