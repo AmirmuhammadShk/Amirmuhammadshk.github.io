@@ -4,12 +4,12 @@
 ---
 
 ## 💻 Programming Languages  
-**Python** · **Rust** · **C** · **Bash** · **PostgreSQL** · **Terraform**
+**Python** · **Rust** · **C** 
 
 ---
 
 ## ⚙️ Frameworks & Libraries  
-**FastAPI** · **Django** · **React.js** · **LangChain** · **Semantic Kernel** · **AutoGen**
+**FastAPI** · **Django** . **LangChain** · **Semantic Kernel** · **AutoGen**
 
 ---
 
@@ -38,6 +38,6 @@
 ---
 
 ## 🖧 Systems & Networking  
-**Linux** · **FreeBSD** · **Socket Programming** · **Microservices Architecture**  
+**Linux** · **Socket Programming** · **Microservices Architecture**  
 **Network Protocols** · **System Monitoring & Automation**
 
