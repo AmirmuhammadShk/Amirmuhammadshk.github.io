@@ -1,17 +1,12 @@
-# Summary
+## Professional Summary
 
-Experienced **Software Engineer** with deep expertise in **AI**, **machine learning**, **DevOps**, and **cloud-native backend systems**. Over nearly a decade, I’ve architected and deployed AI-driven platforms, integrated LLMs, and built scalable infrastructure for automation and intelligent services.
-## Core Competencies
+** Software Engineer | Linux & Cloud Systems Expert | AI/AGI Expert **  
+*10+ years designing scalable, intelligent systems for high-performance environments*
 
-- **Programming & Scripting:** Python, Rust, C, Bash, Terraform, PostgreSQL  
-- **Frameworks & Libraries:** FastAPI, Django, React.js, LangChain, Semantic Kernel, AutoGen  
-- **AI & Machine Learning:** LLMs, Generative AI, RAG, Prompt Engineering, Deep Learning, Reinforcement Learning  
-- **DevOps & Infrastructure:** Docker, Kubernetes, CI/CD, Terraform, Jenkins, Ansible, Git, IaC  
-- **Cloud Platforms:** Google Cloud (GCP), Microsoft Azure, Cloud Security, PaaS, IaaS, SaaS  
-- **Databases & Indexing:** PostgreSQL, Redis, Vector DBs, Elasticsearch  
-- **Systems & Networking:** Linux, FreeBSD, Socket Programming, Microservices Architecture, System Monitoring  
+Technical leader specializing in:
+- **AI/ML Systems**: Production-grade LLM applications (RAG, AutoGen, LangChain) reducing operational workloads by 40-70%
+- **Cloud Architecture**: Kubernetes-based AI platforms (Kubeflow, vLLM) and IaC-managed infrastructure with 99.99% uptime
+- **Performance Engineering**: Low-latency APIs (Python/Rust) and Linux-optimized systems delivering 40% cost reductions
+- **Technical Leadership**: Cross-functional team management for AI-cloud hybrid solutions with demonstrable ROI
 
-## Current Focus
-
-Building next-generation, AI-first automation tools that drive operational efficiency and intelligent decision-making.
-
+**Key Technologies**: Python, Rust, Docker, Kubernetes, Terraform, LLMs, Semantic Kernel, AutoGen, PostgreSQL, Redis, Django  
