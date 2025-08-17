@@ -1,47 +1,62 @@
-# 👋 Meet Amirmohammad Shakeri
+# 👋 Meet Amirmohammad Shakeri  
 
-** Software Engineer | Cloud & DevOps Specialist | AI/AGI Systems | Linux Specialist **  
-_A decade of delivering intelligent software systems that don’t just scale — they evolve._
+** Software Engineer | Linux & Cloud Systems Expert | AI/AGI Expert **  
+*A decade of architecting intelligent systems that scale globally, optimize costs, and enable autonomous decision-making.*  
 
----
+---  
 
-## 🤝 Why Work With Me?
+## 🚀 Why Work With Me?  
 
-I bring the **discipline of a backend systems architect**, the **curiosity of an AI researcher**, and the **precision of a DevOps engineer**.  
-I thrive in high-performance environments and specialize in solving complex challenges—from kernel to cloud, and from prototype to production.
+I bridge **high-performance systems engineering** with **cutting-edge AI/AGI** to build infrastructure that doesn’t just run—it *adapts*. With nearly **10 years of experience**, I specialize in:  
 
-If you're looking for a resilient, AI-native engineer who moves between code, compute, and capability with ease — let’s connect.
+- **Scalable Backend Systems**: Designing low-latency, fault-tolerant architectures (Python/Rust/C) for millions of requests/day.  
+- **AI-Native Infrastructure**: Building LLM-powered agents, RAG pipelines, and multi-agent frameworks for real-world automation.  
+- **Cloud & Linux Optimization**: Tuning kernels (40%+ latency reductions), automating DevOps, and deploying HPC-ready AI workloads.  
 
----
+I thrive where **systems rigor meets AI innovation**—whether it’s rewriting monoliths into microservices or deploying self-optimizing AI backends.  
 
-## 💼 Core Competencies
+---  
 
-### 🤖 AI, AGI & Multi-Agent Intelligence
-- Architecting intelligent systems using **LLMs**, **LangChain**, **Semantic Kernel**, and **AutoGen**
-- Designing **RAG pipelines**, tool-augmented agents, and autonomous orchestration frameworks
-- R&D in **multi-agent reinforcement learning**, **meta-learning**, and **LLM-powered automation**
+## 💡 Core Competencies  
 
-### ☁️ DevOps & Cloud Architecture
-- Building full-scale CI/CD pipelines using **Terraform**, **Ansible**, **GitHub Actions**, and **Jenkins**
-- Deploying across **Azure**, **GCP**, and container-based infrastructure with **Kubernetes**, **Docker**, and service mesh
-- Observability, secrets management, and secure zero-downtime delivery
+### 🤖 **AI/AGI & Autonomous Systems**  
+- **LLM Engineering**: Production-grade RAG, tool-augmented agents (LangChain, Semantic Kernel), and enterprise workflow automation.  
+- **Multi-Agent Systems**: Frameworks for collaborative AI decision-making (AutoGen, reinforcement learning).  
+- **AI Infrastructure**: Optimizing LLM inference, fine-tuning (Mistral, Phi-3), and MLOps pipelines (Kubeflow).  
 
-### 🧩 Software & Backend Engineering
-- Developing performant APIs and services in **Python**, **Rust**, **FastAPI**, and **Django**
-- Distributed systems using **PostgreSQL**, **Redis**, **ElasticSearch**, and async processing
-- Capable of building clean, high-performance frontends with **React** when needed
+### ☁️ **Cloud & DevOps Architecture**  
+- **Infrastructure-as-Code**: Terraform, Ansible, and Pulumi for reproducible, cost-efficient clouds (Azure/GCP/AWS).  
+- **Kubernetes at Scale**: High-availability clusters, service mesh (Istrio/Linkerd), and GPU orchestration for AI.  
+- **Observability & Security**: Zero-trust architectures, Prometheus/Grafana, and secrets management (Vault, SOPS).  
 
-### 🐧 Linux Systems & High-Performance Computing
-- Advanced expertise in **Linux kernel tuning**, **network stack optimization**, and **zero-copy architectures**
-- Systems programming with **Rust**, **C**, and shell scripting
-- Secure automation and provisioning using **Bash**, **Ansible**, and custom tooling for HPC clusters
+### 🖥️ **Backend & Distributed Systems**  
+- **Performance-Centric APIs**: FastAPI, Django, and Rust services with PostgreSQL, Redis, and ElasticSearch.  
+- **Event-Driven Architectures**: Kafka/Pulsar for real-time data pipelines and async processing.  
+- **Linux Systems Programming**: Kernel tuning (zero-copy networking, eBPF), HPC environments, and Rust/C tooling.  
 
----
+---  
 
-## 📈 Currently Exploring
+## 🔥 Recent Work Highlights  
 
-- 🧠 R&D in scalable AGI architectures and AI infra  
-- 🔬 Fine-tuning open-source LLMs (Mistral, Phi-3)  
-- ⚙️ MLOps with **Kubeflow** and multi-agent pipelines  
-- 🛡️ Building high-availability, zero-trust AI infrastructure fully defined as code
+- **Scaled a monolithic API to 10M+ RPM** by decomposing into Kubernetes-native microservices with 40% cost savings.  
+- **Slashed AI inference latency** by optimizing Linux TCP stacks and GPU memory allocation.  
+- **Built an LLM-powered audit system** that automates 70% of compliance workflows for a Fortune 500 client.  
 
+---  
+
+## 🌟 Current Focus  
+
+- **AI-First Backends**: Dynamically adaptive infrastructure using LLMs for auto-scaling and anomaly detection.  
+- **Agent Ecosystems**: Multi-AI systems that collaborate on complex tasks (e.g., supply chain/logistics).  
+- **Cloud-Native HPC**: Bare-metal performance in Kubernetes (eBPF, RDMA, and NUMA-aware scheduling).  
+
+---  
+
+## 📬 Let’s Collaborate If You...  
+
+- Need **scalable backend/AI systems** that balance performance and cost.  
+- Are pushing **LLMs/agents to production** and need infra that won’t break.  
+- Want to **optimize Linux/cloud stacks** for AI or distributed workloads.  
+- Just want to geek out about **AGI, kernel hacking, or Rust performance tricks**.  
+
+*Let’s build systems that think—and scale.*  
